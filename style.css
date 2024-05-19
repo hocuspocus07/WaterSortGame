@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tube {
+    height: 140px;
+    width: 40px;
+    border: 2px solid black;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.tube:hover {
+    cursor: pointer;
+    overlay: auto;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+#logo {
+    font-size: 10rem;
+    font-weight: 400;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a,
+        -4px 0 0 #df4a42,
+        2px 0 0 #91fcfe,
+        4px 0 0 #4405fc;
+    animation: blink 1s steps(4, start) infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+h4 {
+    margin: 5px;
+    position: sticky;
+    z-index: 1;
+}
+
+.colorSquare {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border-radius: 50%;
+}
+
+#logMoves {
+    height: 300px;
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#logMoves::-webkit-scrollbar {
+    display: none;
+}
+
+
+#move {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 96%;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+}
+
+#tubeContainer {
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    height: 45px;
+    width: 200px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: 400;
+    border-radius: 20px;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+    scale: 1.1;
+}
+
+.color {
+    height: 20%;
+}
+
+body::before {
+    content: '';
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    position: absolute;
+    background-color: black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('game.gif');
+}
