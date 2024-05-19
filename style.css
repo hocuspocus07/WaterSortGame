@@ -39,7 +39,7 @@
     font-family: 'Press Start 2P', cursive;
     width: 100%;
     text-align: center;
-    margin: auto;
+    margin-top: 20px;
     font-size: 40px;
     line-height: 40px;
     letter-spacing: 5px;
@@ -151,4 +151,52 @@ body::before {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('game.gif');
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content pre {
+    max-width: 100%;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    word-wrap: break-word;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#howToPlayBtn{
+    padding: 5px;
+    width: 200px;
+    font-size: large;
+    font-family: "Jersey 10", sans-serif;
+    margin: 20px;
+    border-radius: 10px;
+}
+#howToPlayBtn:hover{
+    cursor: pointer;
 }

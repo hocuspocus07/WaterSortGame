@@ -238,3 +238,25 @@ addEventListener('DOMContentLoaded', function () {
     createTubes();
     addColors();
 })
+// how to play modal
+// get the modal and the button to open it
+let modal = document.getElementById("howToPlayModal");
+let btn = document.getElementById("howToPlayBtn");
+
+// get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+btn.addEventListener("click", function() {
+    modal.style.display = "block";
+});
+
+// close effect 
+span.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+// close outside modal
+window.addEventListener("click", function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});

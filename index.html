@@ -4,14 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Water Sort</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
     <div class="container">
         <div id="logo">WATER SORT</div>
+        <button id="howToPlayBtn">How to Play</button>
+        <div id="howToPlayModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>How to Play Water Sort</h2>
+                <p>
+                    <pre>
+                    <h2>Objective:</h2> Fill all tubes with a single color each.
+                    
+                    <h2>Gameplay:</h2>
+                    1. Click on an empty tube to select it.
+                    2. Click on another tube to move colors from the selected tube to the destination tube.
+                    3. Colors can only be moved if the destination tube is empty or has the same color at its top.
+                    4. Use consecutive colors to optimize moves.
+                    5. Click "Undo" to reverse the last move.
+                    6. Win by filling all tubes with one color each.
+                    
+                    <h2>Controls:</h2>
+                    - Click: Select or move colors between tubes.
+                    - Undo Button: Reverse the last move.</pre>
+                </p>
+            </div>
+        </div>
         <div id="tubeContainer">
         </div>
         <button id="reset" class="button">RESET</button>
